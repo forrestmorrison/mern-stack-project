@@ -1,8 +1,13 @@
 import React from 'react'
 
-const GoalItem = () => {
+const GoalItem = ({goal}) => {
   return (
-    <div>GoalItem</div>
+    <div className='goal'>
+        <div>
+            {new Date(goal.createdAt).toLocaleString('en-US')}
+        </div>
+        <h2>{goal.text}</h2>
+    </div>
   )
 }
 
